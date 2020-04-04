@@ -5,13 +5,34 @@
     <title>우주위키 - 우주에 대한 모든것</title>
     <link rel="icon" href="favicon.ico">
     <style>
+      html {
+        height: 100%;
+        width: 100%;
+      }
       body {
         margin: 0;
+        height: inherit;
+        font-family: "나눔고딕";
+      }
+      #background {
+        height: inherit;
+        z-index: 0
+      }
+      #background::after {
+        content: "";
+        background-image: url("mainbackground.jpg");
+        background-size: 100% auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7
       }
       h1 {
-        border-bottom: solid 1px black;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.5);
         font-size: 30px;
-        font-family: "나눔고딕";
         margin: 0;
         padding: 20px;
       }
@@ -19,18 +40,46 @@
         color: black;
         text-decoration: none;
       }
+      .welcome {
+        text-align: center;
+        font-weight: 500;
+      }
+      .welcome span {
+        color: lightblue;
+      }
+      #welcome {
+        border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+      }
       #mainlogo {
         height: 50px;
         width: 200px;
         display: block;
-        padding-right: 100%;
-        background-clip: padding-box;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        border: 15px solid rgba(0, 0, 0, 0.8);
         background-color: rgba(0, 0, 0, 0.8);
+        background-clip: content-box;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
       }
     </style>
   </head>
   <body>
-    <a href="index.html"><img id="mainlogo" src="mainlogo.png" alt="우주위키 로고"></a>
-    <h1><a href="index.html">우주위키:대문</a></h1>
+    <div id="background">
+      <div id="grid">
+        <a href="index.html"><img style="border: 2px solid silver; border-radius: 10px;" id="mainlogo" src="mainlogo.jpg" alt="우주위키 메인로고"></a>
+        <div>
+        </div>
+      </div>
+      <h1><a href="index.html">우주위키:대문</a></h1>
+      <div id="welcome">
+        <h2 class="welcome" style="font-weight: 900; margin-bottom: 0;">여러분이 가꾸어 나가는 <span>지식의 우주</span></h2>
+        <h3 class="welcome" style="margin-top: 5px; font-size: 18px;"><span>우주위키</span>에 오신 것을 환영합니다!</h3>
+        <p  class="welcome" style="font-size: 18px;">우주위키는 누구나 기여할 수 있는 위키입니다.<br>
+        검증되지 않았거나 편향된 내용이 있을 수 있습니다.</p>
+      </div>
+    </div>
   </body>
 </html>
