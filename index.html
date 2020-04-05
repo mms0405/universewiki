@@ -28,7 +28,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        opacity: 0.7
+        opacity: 0.55
       }
       h1 {
         border-bottom: solid 1px rgba(0, 0, 0, 0.5);
@@ -64,6 +64,24 @@
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
       }
+      #universe_monster {
+        text-align: center;
+        filter: blur(7px);
+      }
+      #universe_monster img {
+        width: 500px;
+        height: 500px;
+      }
+      #mainpage_arrow1 {
+        font-size: 30px;
+        margin-top: 0;
+      }
+      .mainpage {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        text-shadow: -1px 0 white, 1px 0 white, 0 -1px white, 0 1px white
+      }
     </style>
   </head>
   <body>
@@ -75,10 +93,20 @@
       </div>
       <h1><a href="index.html">우주위키:대문</a></h1>
       <div id="welcome">
-        <h2 class="welcome" style="font-weight: 900; margin-bottom: 0;">여러분이 가꾸어 나가는 <span>지식의 우주</span></h2>
+        <h2 class="welcome" style="font-weight: 900; margin-bottom: 0;">여러분이 가꾸어 나가는 <span>우주의 지식</span></h2>
         <h3 class="welcome" style="margin-top: 5px; font-size: 18px;"><span>우주위키</span>에 오신 것을 환영합니다!</h3>
         <p  class="welcome" style="font-size: 18px;">우주위키는 누구나 기여할 수 있는 위키입니다.<br>
         검증되지 않았거나 편향된 내용이 있을 수 있습니다.</p>
+      </div>
+      <div id="universe_monster">
+        <img src="universe_monster.jpg" alt="우주 괴물">
+      </div>
+      <div>
+        <p class="mainpage" id="mainpage_arrow1">
+          ▲
+        </p>
+        <p class="mainpage">이 위키는 위의 사진에 있는 우주라는 생물에 대해 연구하고 기록하기 위해 만들어진 위키이다.</p>
+        <p class="mainpage">이 생물은 아주 위험하여 특수 효과를 넣지 않은 원본 사진을 보면 눈이 멀어버리기 때문에 불가피하게 블러 처리를 한 모습이다.</p>
       </div>
     </div>
   </body>
