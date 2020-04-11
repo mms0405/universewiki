@@ -6,17 +6,15 @@
     <link rel="icon" href="favicon.ico">
     <style>
       html {
-        height: 100%;
-        width: 100%;
       }
       body {
         margin: 0;
-        height: inherit;
-        font-family: "나눔고딕";
+        font-family: "맑은고딕";
       }
       #background {
-        height: inherit;
-        z-index: 0
+        z-index: 0;
+        height: 100%;
+        position: relative;
       }
       #background::after {
         content: "";
@@ -69,6 +67,7 @@
         filter: blur(7px);
       }
       #universe_monster img {
+        padding-top: 20px;
         width: 500px;
         height: 500px;
       }
@@ -81,6 +80,28 @@
         font-size: 18px;
         font-weight: 500;
         text-shadow: -1px 0 white, 1px 0 white, 0 -1px white, 0 1px white
+      }
+      #universe_monster_2 {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      }
+      #규정1 {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        border-left: 2px solid silver;
+        border-right: 2px solid silver;
+        border-bottom: 2px solid silver;
+      }
+      #규정2 {
+        padding-left: 20px;
+        border-left: 2px solid silver;
+      }
+      .규정1 {
+        margin: 20px 0 0 0;
+      }
+      .규정2 {
+        font-weight: 500;
+        font-size: 18px;
+        margin: 5px 0 20px 0;
       }
     </style>
   </head>
@@ -101,12 +122,40 @@
       <div id="universe_monster">
         <img src="universe_monster.jpg" alt="우주 괴물">
       </div>
-      <div>
+      <div id="universe_monster_2">
         <p class="mainpage" id="mainpage_arrow1">
           ▲
         </p>
-        <p class="mainpage">이 위키는 위의 사진에 있는 우주라는 생물에 대해 연구하고 기록하기 위해 만들어진 위키이다.</p>
-        <p class="mainpage">이 생물은 아주 위험하여 특수 효과를 넣지 않은 원본 사진을 보면 눈이 멀어버리기 때문에 불가피하게 블러 처리를 한 모습이다.</p>
+        <p class="mainpage">이 위키는 위의 사진에 있는 우주라는 생물에 대해 연구하고 기록하기 위해 만들어진 위키이다.
+        <br>이 생물은 아주 위험하여 특수 효과를 넣지 않은 원본 사진을 보면 눈이 멀어버린다.</p>
+      </div>
+      <div id="규정1" style="margin-top: 20px; border-top:2px solid silver;">
+        <img src="물음표.png" alt="물음표" style="width: 80px; padding: 10px;">
+        <div id="규정2">
+          <h2 class="규정1">우주위키에 처음 오셨나요?</h2>
+          <p class="규정2">먼저 규정과 도움말, 자주 하는 실수를 확인해 보세요.</p>
+        </div>
+      </div>
+      <div id="규정1">
+        <img src="말풍선.png" alt="물음표" style="width: 80px; padding: 10px;">
+        <div id="규정2">
+          <h2 class="규정1">우주위키 게시판</h2>
+          <p class="규정2">공지 · 그루터기 · 문의 · 신고 · 차단 소명 · 다중 계정 검사 · 토론 문의 · 개발 문의</p>
+        </div>
+      </div>
+      <div id="규정1">
+        <img src="물음표.png" alt="물음표" style="width: 80px; padding: 10px;">
+        <div id="규정2">
+          <h2 class="규정1">권리침해 문의</h2>
+          <p class="규정2">문의 방법이 권리침해 도움말에 설명되어 있습니다.</p>
+        </div>
+      </div>
+      <div id="규정1">
+        <img src="물음표.png" alt="물음표" style="width: 80px; padding: 10px;">
+        <div id="규정2">
+          <h2 class="규정1">운영진 지원</h2>
+          <p class="규정2">우주위키에서 운영진을 상시 모집하지 않습니다. <a href="경고.html" style="text-decoration: none; color: red;">이곳</a>에서 지원하실 수 없습니다.</p>
+        </div>
       </div>
     </div>
   </body>
